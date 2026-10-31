@@ -78,4 +78,58 @@
     <string name="detalle_nada_falta">No necesitas comprar nada más.</string>
     <string name="detalle_preparacion">Preparación</string>
     <string name="detalle_aviso">Receta sugerida por inteligencia artificial. Revisa los tiempos de cocción y ten en cuenta tus alergias.</string>
+    <string name="disponible_sprint2">Disponible en el Sprint 2</string>
+    <string name="disponible_sprint3">Disponible en el Sprint 3</string>
+
+    <string name="pref_boton">¿Tienes un requisito adicional?</string>
+    <string name="pref_titulo">Preferencias</string>
+    <string name="pref_tipo_cocina">Tipo de cocina</string>
+    <string name="pref_cocina_peruana">Peruana</string>
+    <string name="pref_cocina_criolla">Criolla</string>
+    <string name="pref_cocina_marina">Marina</string>
+    <string name="pref_cocina_andina">Andina</string>
+    <string name="pref_cocina_internacional">Internacional</string>
+    <string name="pref_restricciones">Restricción alimentaria</string>
+    <string name="pref_vegetariano">Vegetariano</string>
+    <string name="pref_vegano">Vegano</string>
+    <string name="pref_sin_gluten">Sin gluten</string>
+    <string name="pref_sin_lactosa">Sin lactosa</string>
+    <string name="pref_bajo_sal">Bajo en sal</string>
+    <string name="pref_porciones">Cantidad de porciones</string>
+    <string name="pref_guardado">Guardaremos tus preferencias para la próxima vez</string>
+
+    <string name="detalle_compartir">Compartir receta</string>
+    <string name="detalle_copiar">Copiar</string>
+    <string name="detalle_favorito">Marcar como favorita</string>
+    <string name="detalle_ver_historial">Ver mi historial</string>
+    <string name="receta_favorito">Guardar en favoritos</string>
+    <string name="receta_sugerida_el">Sugerida el %1$s</string>
+
+    <string name="historial_titulo">Historial</string>
+    <string name="historial_tab_historial">Historial</string>
+    <string name="historial_tab_favoritos">Favoritos</string>
+    <string name="historial_vacio">Aún no tienes detecciones guardadas.\nLas recetas que te sugiera la app aparecerán aquí.</string>
+    <string name="historial_invitado">Inicia sesión para guardar tu historial y tus favoritos</string>
+    <string name="historial_iniciar_sesion">Iniciar sesión</string>
+
+    <string name="verif_titulo">Verificación en dos pasos</string>
+    <string name="verif_texto">Te enviamos un código de verificación a</string>
+    <string name="verif_digito">Dígito del código</string>
+    <string name="verif_digito_hint">–</string>
+    <string name="verif_error">El código ingresado no es correcto</string>
+    <string name="verif_boton">Verificar</string>
+    <string name="verif_reenviar">Reenviar código</string>
+
+    <string name="cuenta_seguridad">Seguridad</string>
+    <string name="cuenta_dos_pasos">Verificación en dos pasos</string>
+    <string name="cuenta_dos_pasos_ayuda">Te pediremos un código enviado a tu correo al iniciar sesión</string>
+    <string name="cuenta_mis_recetas">Mis recetas</string>
+    <string name="cuenta_historial">Historial</string>
+    <string name="cuenta_favoritos">Favoritos</string>
+
+    <string name="malogrado_titulo">Producto en mal estado</string>
+    <string name="malogrado_mensaje">Detectamos que este %1$s podría estar malogrado</string>
+    <string name="malogrado_ayuda">Revisa el producto antes de usarlo</string>
+    <string name="malogrado_descartar">No agregar</string>
+    <string name="malogrado_agregar">Agregar de todos modos</string>
 </resources>

@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHolder> {
@@ -48,6 +50,8 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
             int pos = holder.getBindingAdapterPosition();
             if (pos != RecyclerView.NO_POSITION) listener.onAbrir(recetas.get(pos));
         });
+        v.findViewById(R.id.btnFavorito).setOnClickListener(x ->
+                Snackbar.make(x, R.string.disponible_sprint2, Snackbar.LENGTH_SHORT).show());
         return holder;
     }
 

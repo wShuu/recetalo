@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="12dp"
@@ -30,14 +31,21 @@
                 android:layout_weight="1"
                 android:textColor="@color/verde_oscuro"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="Lomo saltado" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_flecha_derecha"
-                app:tint="@color/verde_oscuro" />
+            <ImageButton
+                android:id="@+id/btnFavorito"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginVertical="-6dp"
+                android:background="@drawable/fondo_circulo_verde_tactil"
+                android:contentDescription="@string/receta_favorito"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_estrella_borde"
+                app:tint="@color/white" />
         </LinearLayout>
 
         <TextView
@@ -48,7 +56,8 @@
             android:ellipsize="end"
             android:maxLines="2"
             android:textColor="@color/texto_secundario"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            tools:text="Clásico peruano de carne salteada al wok con papas fritas." />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,17 +68,20 @@
             <TextView
                 android:id="@+id/tvTiempo"
                 style="@style/RecetaLo.Pastilla"
-                android:drawableStart="@drawable/ic_reloj" />
+                android:drawableStart="@drawable/ic_reloj"
+                tools:text="30 min" />
 
             <TextView
                 android:id="@+id/tvDificultad"
                 style="@style/RecetaLo.Pastilla"
-                android:drawableStart="@drawable/ic_nivel" />
+                android:drawableStart="@drawable/ic_nivel"
+                tools:text="Media" />
 
             <TextView
                 android:id="@+id/tvPorciones"
                 style="@style/RecetaLo.Pastilla"
-                android:drawableStart="@drawable/ic_personas" />
+                android:drawableStart="@drawable/ic_personas"
+                tools:text="2 porciones" />
         </LinearLayout>
 
         <View
@@ -88,7 +100,8 @@
             android:gravity="center_vertical"
             android:textColor="@color/verde_oliva"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="Usa 4 de tus ingredientes" />
 
         <TextView
             android:id="@+id/tvFalta"
@@ -102,6 +115,19 @@
             android:gravity="center_vertical"
             android:maxLines="2"
             android:textColor="@color/texto"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:text="Te falta: sillao, ají amarillo" />
+
+        <TextView
+            android:id="@+id/tvFechaGenerada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/texto_secundario"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="Sugerida el 08/09/26"
+            tools:visibility="visible" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

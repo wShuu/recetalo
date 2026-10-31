@@ -37,6 +37,7 @@
 
     <TextView
         android:id="@+id/tvIngredientes"
+        tools:text="Con: Carne, Tomate, Cebolla, Papa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -60,12 +61,16 @@
             android:paddingHorizontal="16dp"
             android:paddingTop="8dp"
             android:paddingBottom="16dp"
-            android:visibility="gone" />
+            android:visibility="gone"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_receta"
+            tools:visibility="visible" />
 
         <LinearLayout
             android:id="@+id/layoutCargando"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            tools:visibility="gone"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="32dp">
@@ -138,5 +143,6 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="16dp"
         android:text="@string/recetas_otras"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 </LinearLayout>

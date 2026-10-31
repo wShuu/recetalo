@@ -27,6 +27,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/recetas_titulo" />
+
+        <ImageButton
+            android:id="@+id/btnFavoritoDetalle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/fondo_circulo_verde_tactil"
+            android:contentDescription="@string/detalle_favorito"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_estrella_borde"
+            app:tint="@color/white" />
     </FrameLayout>
 
     <View
@@ -49,6 +62,7 @@
 
             <TextView
                 android:id="@+id/tvNombre"
+                tools:text="Lomo saltado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
@@ -58,6 +72,7 @@
 
             <TextView
                 android:id="@+id/tvDescripcion"
+                tools:text="Clásico peruano de carne salteada al wok con papas fritas."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
@@ -72,16 +87,19 @@
 
                 <TextView
                     android:id="@+id/tvTiempo"
+                    tools:text="30 min"
                     style="@style/RecetaLo.Pastilla"
                     android:drawableStart="@drawable/ic_reloj" />
 
                 <TextView
                     android:id="@+id/tvDificultad"
+                    tools:text="Media"
                     style="@style/RecetaLo.Pastilla"
                     android:drawableStart="@drawable/ic_nivel" />
 
                 <TextView
                     android:id="@+id/tvPorciones"
+                    tools:text="2 porciones"
                     style="@style/RecetaLo.Pastilla"
                     android:drawableStart="@drawable/ic_personas" />
             </LinearLayout>
@@ -116,6 +134,7 @@
 
                         <TextView
                             android:id="@+id/tvTituloUsa"
+                            tools:text="Ya tienes (4)"
                             style="@style/RecetaLo.TituloSeccion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -127,7 +146,54 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:orientation="vertical" />
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/fondo_numero_paso" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/texto"
+                                android:textSize="15sp"
+                                tools:text="Carne (400 g)" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/fondo_numero_paso" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/texto"
+                                android:textSize="15sp"
+                                tools:text="Papa (3 unidades)" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -162,6 +228,7 @@
 
                         <TextView
                             android:id="@+id/tvTituloFalta"
+                            tools:text="Te falta comprar (2)"
                             style="@style/RecetaLo.TituloSeccion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -173,7 +240,54 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:orientation="vertical" />
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/fondo_numero_paso" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/texto"
+                                android:textSize="15sp"
+                                tools:text="Sillao (2 cucharadas)" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/fondo_numero_paso" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/texto"
+                                android:textSize="15sp"
+                                tools:text="Ají amarillo (1 unidad)" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -205,7 +319,70 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical" />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/fondo_numero_paso"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/fondo_lista"
+                        android:padding="12dp"
+                        android:textColor="@color/texto"
+                        android:textSize="15sp"
+                        tools:text="Corta la carne en tiras y sazónala con sal y pimienta." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/fondo_numero_paso"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/fondo_lista"
+                        android:padding="12dp"
+                        android:textColor="@color/texto"
+                        android:textSize="15sp"
+                        tools:text="Saltea la carne a fuego alto con la cebolla y el tomate." />
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -217,6 +394,46 @@
                 android:text="@string/detalle_aviso"
                 android:textColor="@color/texto_secundario"
                 android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCompartir"
+                    style="@style/RecetaLo.BotonPrincipal"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/detalle_compartir"
+                    app:icon="@drawable/ic_compartir"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCopiar"
+                    style="@style/RecetaLo.BotonContorno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/detalle_copiar"
+                    app:icon="@drawable/ic_copiar"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/verde_oliva" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerHistorial"
+                style="@style/RecetaLo.BotonSecundario"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/detalle_ver_historial"
+                app:icon="@drawable/ic_historial"
+                app:iconGravity="textStart"
+                app:iconTint="@color/verde_oscuro" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

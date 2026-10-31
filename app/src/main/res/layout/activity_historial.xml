@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crema"
+    android:orientation="vertical"
+    tools:context=".HistorialActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageButton
+            android:id="@+id/btnAtras"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/volver"
+            android:src="@drawable/ic_atras"
+            app:tint="@color/texto" />
+
+        <TextView
+            style="@style/RecetaLo.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/historial_titulo" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gris_borde" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="14dp"
+        app:checkedButton="@id/btnTabHistorial"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTabHistorial"
+            style="@style/RecetaLo.BotonContorno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/historial_tab_historial"
+            android:textColor="@color/toggle_texto"
+            app:backgroundTint="@color/toggle_fondo"
+            app:icon="@drawable/ic_historial"
+            app:iconGravity="textStart"
+            app:iconTint="@color/toggle_texto"
+            app:strokeColor="@color/verde_oliva" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTabFavoritos"
+            style="@style/RecetaLo.BotonContorno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/historial_tab_favoritos"
+            android:textColor="@color/toggle_texto"
+            app:backgroundTint="@color/toggle_fondo"
+            app:icon="@drawable/ic_estrella"
+            app:iconGravity="textStart"
+            app:iconTint="@color/toggle_texto"
+            app:strokeColor="@color/verde_oliva" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_receta" />
+
+        <TextView
+            android:id="@+id/tvHistorialVacio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_historial"
+            android:drawablePadding="12dp"
+            android:drawableTint="@color/verde_oliva"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/historial_vacio"
+            android:textColor="@color/texto_secundario"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutInvitado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/crema"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_candado"
+                app:tint="@color/verde_oliva" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/historial_invitado"
+                android:textColor="@color/texto"
+                android:textSize="15sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIniciarSesionHistorial"
+                style="@style/RecetaLo.BotonPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/historial_iniciar_sesion" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

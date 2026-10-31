@@ -72,6 +72,9 @@ public class IngredientesActivity extends AppCompatActivity {
         binding.btnAtras.setOnClickListener(v -> finish());
         binding.btnSeguirEscaneando.setOnClickListener(v -> finish());
         binding.btnRecetas.setOnClickListener(v -> pedirRecetas());
+        binding.btnRequisitoAdicional.setOnClickListener(v ->
+                binding.cardPreferencias.setVisibility(
+                        binding.cardPreferencias.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
 
         actualizarEstado();
     }

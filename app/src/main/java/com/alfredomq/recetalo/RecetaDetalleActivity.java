@@ -1,5 +1,6 @@
 package com.alfredomq.recetalo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.alfredomq.recetalo.databinding.ActivityRecetaDetalleBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -25,6 +27,11 @@ public class RecetaDetalleActivity extends AppCompatActivity {
         binding = ActivityRecetaDetalleBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.btnAtras.setOnClickListener(v -> finish());
+        binding.btnFavoritoDetalle.setOnClickListener(this::mostrarSprint2);
+        binding.btnCompartir.setOnClickListener(this::mostrarSprint2);
+        binding.btnCopiar.setOnClickListener(this::mostrarSprint2);
+        binding.btnVerHistorial.setOnClickListener(v ->
+                startActivity(new Intent(this, HistorialActivity.class)));
 
         Receta receta = (Receta) getIntent().getSerializableExtra(EXTRA_RECETA);
         if (receta == null) {
@@ -32,6 +39,10 @@ public class RecetaDetalleActivity extends AppCompatActivity {
             return;
         }
         mostrar(receta);
+    }
+
+    private void mostrarSprint2(View v) {
+        Snackbar.make(binding.getRoot(), R.string.disponible_sprint2, Snackbar.LENGTH_SHORT).show();
     }
 
     private void mostrar(Receta r) {

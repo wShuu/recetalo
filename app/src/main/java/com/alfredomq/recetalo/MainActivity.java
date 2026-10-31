@@ -20,6 +20,7 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
@@ -31,6 +32,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.alfredomq.recetalo.databinding.ActivityMainBinding;
+import com.alfredomq.recetalo.databinding.DialogMiCuentaBinding;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
@@ -495,16 +497,39 @@ public class MainActivity extends AppCompatActivity {
 
         String nombre = usuario.getDisplayName();
         String correo = usuario.getEmail() != null ? usuario.getEmail() : "";
-        String detalle = (nombre != null && !nombre.trim().isEmpty())
-                ? nombre.trim() + "\n" + correo
-                : correo;
 
-        new MaterialAlertDialogBuilder(this)
-                .setTitle(R.string.cuenta_titulo)
-                .setMessage(detalle)
+        DialogMiCuentaBinding cuenta = DialogMiCuentaBinding.inflate(getLayoutInflater());
+        if (nombre != null && !nombre.trim().isEmpty()) {
+            cuenta.tvNombreCuenta.setText(nombre.trim());
+        } else {
+            cuenta.tvNombreCuenta.setText(R.string.cuenta_titulo);
+        }
+        cuenta.tvCorreoCuenta.setText(correo);
+
+        AlertDialog dialogo = new MaterialAlertDialogBuilder(this)
+                .setView(cuenta.getRoot())
                 .setNegativeButton(R.string.cancelar, null)
-                .setPositiveButton(R.string.cuenta_cerrar_sesion, (d, w) -> confirmarCerrarSesion())
                 .show();
+
+        cuenta.switchDosPasos.setOnCheckedChangeListener((boton, activado) -> {
+            if (activado) {
+                boton.setChecked(false);
+                startActivity(new Intent(this, VerificacionActivity.class));
+            }
+        });
+        cuenta.opcionHistorial.setOnClickListener(v -> {
+            dialogo.dismiss();
+            startActivity(new Intent(this, HistorialActivity.class));
+        });
+        cuenta.opcionFavoritos.setOnClickListener(v -> {
+            dialogo.dismiss();
+            startActivity(new Intent(this, HistorialActivity.class)
+                    .putExtra(HistorialActivity.EXTRA_FAVORITOS, true));
+        });
+        cuenta.btnCerrarSesion.setOnClickListener(v -> {
+            dialogo.dismiss();
+            confirmarCerrarSesion();
+        });
     }
 
     private void confirmarCerrarSesion() {
