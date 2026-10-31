@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="5dp">
+
+    <View
+        android:id="@+id/punto"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/fondo_numero_paso" />
+
+    <TextView
+        android:id="@+id/tvTexto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:textColor="@color/texto"
+        android:textSize="15sp" />
+</LinearLayout>

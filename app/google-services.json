@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "36332529998",
+    "project_id": "recetalo-ed3f6",
+    "storage_bucket": "recetalo-ed3f6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36332529998:android:a8ecbe299ee49248ba561f",
+        "android_client_info": {
+          "package_name": "com.alfredomq.recetalo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhKwf_lGtMajESjHTUwCblZZ9ZJ-ZnYT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

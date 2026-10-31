@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Apprecetas" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/verde_oliva</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/verde_claro</item>
+        <item name="colorOnPrimaryContainer">@color/verde_oscuro</item>
+        <item name="colorSecondary">@color/verde_oscuro</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/verde_claro</item>
+        <item name="colorOnSecondaryContainer">@color/verde_oscuro</item>
+        <item name="colorTertiary">@color/verde_oscuro</item>
+        <item name="colorSurface">@color/crema</item>
+        <item name="colorOnSurface">@color/texto</item>
+        <item name="colorSurfaceContainerHigh">@color/crema</item>
+        <item name="colorSurfaceContainerHighest">@color/crema</item>
+        <item name="colorOutline">@color/gris_borde</item>
+        <item name="android:colorBackground">@color/crema</item>
+        <item name="android:windowBackground">@color/crema</item>
+        <item name="android:statusBarColor">@color/crema</item>
+        <item name="android:navigationBarColor">@color/crema</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="Theme.Apprecetas" parent="Base.Theme.Apprecetas" />
+
+    <style name="RecetaLo.Titulo" parent="">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="RecetaLo.BotonPrincipal" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/verde_oliva</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">6dp</item>
+    </style>
+
+    <style name="RecetaLo.BotonContorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/verde_oliva</item>
+        <item name="strokeColor">@color/gris_borde</item>
+        <item name="cornerRadius">6dp</item>
+    </style>
+    <style name="RecetaLo.BotonSecundario" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/verde_claro</item>
+        <item name="android:textColor">@color/verde_oscuro</item>
+        <item name="strokeColor">@color/gris_borde</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">6dp</item>
+    </style>
+
+    <style name="RecetaLo.BotonTexto" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/verde_oliva</item>
+    </style>
+
+    <style name="RecetaLo.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/blanco_input</item>
+        <item name="boxStrokeColor">@color/verde_oliva</item>
+        <item name="hintTextColor">@color/verde_oliva</item>
+        <item name="endIconTint">@color/texto_secundario</item>
+    </style>
+
+    <style name="RecetaLo.Tarjeta" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/crema</item>
+        <item name="strokeColor">@color/gris_borde</item>
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+    <style name="RecetaLo.Pastilla" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/fondo_pastilla</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:drawableTint">@color/verde_oliva</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/texto</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="RecetaLo.TituloSeccion" parent="">
+        <item name="android:textColor">@color/verde_oscuro</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.Recetalo.Splash" parent="Theme.Apprecetas">
+        <item name="android:windowBackground">@color/verde_oliva</item>
+        <item name="android:statusBarColor">@color/verde_oliva</item>
+        <item name="android:navigationBarColor">@color/verde_oliva</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

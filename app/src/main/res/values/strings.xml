@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">RecetaLo!</string>
+
+    <string name="splash_lema">Cocina con lo que tienes</string>
+
+    <string name="logo_texto">RecetaLo<font color="#E53935">!</font></string>
+
+    <string name="campo_correo">Correo electrónico</string>
+    <string name="campo_contrasena">Contraseña</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="volver">Volver</string>
+    <string name="error_correo_vacio">Escribe tu correo electrónico</string>
+    <string name="error_correo_invalido">Escribe un correo válido, por ejemplo nombre@gmail.com</string>
+    <string name="error_contrasena_vacia">Escribe tu contraseña</string>
+
+    <string name="login_invitado">Ingresar como invitado</string>
+    <string name="login_invitado_ayuda">Usa la cámara, tu lista y las recetas sin crear una cuenta</string>
+    <string name="login_titulo">Inicia sesión</string>
+    <string name="login_boton">Iniciar sesión</string>
+    <string name="login_boton_cargando">Ingresando…</string>
+    <string name="login_olvide">¿Olvidaste tu contraseña?</string>
+    <string name="login_sin_cuenta">¿Aún no tienes una cuenta?</string>
+    <string name="login_registrarse">Registrarse</string>
+    <string name="login_bienvenida">¡Hola, %1$s!</string>
+
+    <string name="registro_titulo">Crea tu cuenta</string>
+    <string name="registro_nombre">Nombre</string>
+    <string name="registro_repetir">Repite tu contraseña</string>
+    <string name="registro_ayuda_contrasena">Mínimo 6 caracteres</string>
+    <string name="registro_boton">Registrarme</string>
+    <string name="registro_boton_cargando">Creando cuenta…</string>
+    <string name="registro_ya_tengo">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="error_nombre_vacio">Escribe tu nombre</string>
+    <string name="error_contrasena_corta">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_contrasenas_distintas">Las contraseñas no coinciden</string>
+
+    <string name="recuperar_titulo">Recuperar contraseña</string>
+    <string name="recuperar_descripcion">Escribe el correo de tu cuenta y te enviaremos un enlace para crear una nueva contraseña.</string>
+    <string name="recuperar_boton">Enviar enlace</string>
+    <string name="recuperar_boton_cargando">Enviando…</string>
+    <string name="recuperar_enviado_titulo">Revisa tu correo</string>
+    <string name="recuperar_enviado_mensaje">Si existe una cuenta con %1$s, te enviamos un enlace para crear una nueva contraseña.\n\nSi no lo ves en unos minutos, revisa tu carpeta de spam o correo no deseado.</string>
+
+    <string name="error_credenciales">Correo o contraseña incorrectos</string>
+    <string name="error_cuenta_existe">Ya existe una cuenta con ese correo. Inicia sesión o recupera tu contraseña.</string>
+    <string name="error_contrasena_debil">La contraseña es muy débil. Usa al menos 6 caracteres.</string>
+    <string name="error_cuenta_deshabilitada">Esta cuenta está deshabilitada.</string>
+    <string name="error_sin_conexion">No hay conexión a internet. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="error_muchos_intentos">Demasiados intentos. Espera unos minutos e inténtalo de nuevo.</string>
+    <string name="error_general">Ocurrió un error. Inténtalo de nuevo.</string>
+
+    <string name="cuenta_boton">Mi cuenta</string>
+    <string name="cuenta_titulo">Mi cuenta</string>
+    <string name="cuenta_cerrar_sesion">Cerrar sesión</string>
+    <string name="cuenta_cerrar_confirmar">¿Quieres cerrar sesión? Tu lista de ingredientes actual se vaciará.</string>
+    <string name="invitado_titulo">Modo invitado</string>
+    <string name="invitado_mensaje">Estás usando RecetaLo! sin una cuenta. Puedes usar la cámara, tu lista de ingredientes y las recetas.\n\nCon una cuenta podrás guardar tu historial, tus recetas favoritas y tus preferencias (próximamente).</string>
+    <string name="invitado_ir_login">Iniciar sesión o registrarme</string>
+    <string name="invitado_seguir">Seguir como invitado</string>
+    <string name="recetas_titulo">Tus Recetas</string>
+    <string name="recetas_con">Con: %1$s</string>
+    <string name="recetas_cargando">Buscando recetas con tus ingredientes…</string>
+    <string name="recetas_cargando_ayuda">Esto puede tardar unos segundos</string>
+    <string name="recetas_error_ocupado">El servicio de recetas está muy ocupado en este momento. Inténtalo de nuevo en unos segundos.</string>
+    <string name="recetas_error_red">No hay conexión a internet. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="recetas_reintentar">Reintentar</string>
+    <string name="recetas_otras">Ver otras recetas</string>
+    <string name="recetas_tienes_todo">¡Tienes todo lo necesario!</string>
+    <string name="recetas_te_falta">Te falta: %1$s</string>
+    <plurals name="recetas_usa">
+        <item quantity="one">Usa %d de tus ingredientes</item>
+        <item quantity="other">Usa %d de tus ingredientes</item>
+    </plurals>
+
+    <string name="detalle_ya_tienes">Ya tienes</string>
+    <string name="detalle_te_falta">Te falta comprar</string>
+    <string name="detalle_nada_falta">No necesitas comprar nada más.</string>
+    <string name="detalle_preparacion">Preparación</string>
+    <string name="detalle_aviso">Receta sugerida por inteligencia artificial. Revisa los tiempos de cocción y ten en cuenta tus alergias.</string>
+</resources>

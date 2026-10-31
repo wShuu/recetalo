@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="crema">#F6F2E7</color>
+    <color name="verde_oliva">#6E7A4C</color>
+    <color name="verde_claro">#E4E6D2</color>
+    <color name="verde_oscuro">#264D3B</color>
+    <color name="blanco_input">#FFFDF9</color>
+    <color name="gris_camara">#B3B3B3</color>
+    <color name="gris_borde">#CFCBC0</color>
+    <color name="texto">#1E1E1E</color>
+    <color name="texto_secundario">#5C5C55</color>
+    <color name="rojo_alerta">#E53935</color>
+</resources>
